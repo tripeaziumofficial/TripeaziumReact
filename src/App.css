@@ -9,11 +9,13 @@
     /* --bs-navbar-toggler-icon-bg: url(Hamburgir-Menu.png) !important; */
     transition: ease-in-out 0.6s;
 }
-
 .bg-light {
     --bs-bg-opacity: 0 !important;
 }
-
+.leaflet-container{
+    height:500px;
+    width:100%;
+}
 .fixed-top {
     position: relative !important;
 }
@@ -362,7 +364,6 @@
     width: 100%;
     object-fit: contain;
 }
-
 .srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card > .card-body {
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 100%;
