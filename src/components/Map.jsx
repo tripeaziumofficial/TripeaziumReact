@@ -1,0 +1,63 @@
+import React, { useEffect } from 'react'
+import { MapContainer, Marker, Popup, TileLayer,useMap } from 'react-leaflet'
+import { Icon } from 'leaflet'
+
+const Cafe = new Icon({
+  iconUrl:'https://cdn-icons-png.flaticon.com/512/4574/4574500.png',
+  iconSize: [30,30]
+})
+const College = new Icon({
+  iconUrl:'https://cdn-icons-png.flaticon.com/512/4004/4004157.png',
+  iconSize: [35,35]
+})
+const Map = ({college,types}) => {
+  const RecenterAutomatically = ({lat,lng}) => {
+    const map = useMap();
+     useEffect(() => {
+       map.setView([lat, lng]);
+     }, [lat, lng]);
+     return null;
+   }
+  return (
+    <div>
+    <MapContainer  center={[college.latitude,college.longitude]} zoom={25} scrollWheelZoom={false}>
+    <TileLayer
+    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    />
+    <Marker position={[college.latitude,college.longitude]}
+    icon={College}>
+    <Popup 
+        position={[college.latitude,college.longitude]}
+      >
+      <div>
+        <h1>{college.Name}</h1>
+      </div>
+      </Popup>
+      </Marker>
+      <RecenterAutomatically lat={college.latitude} lng={college.longitude} />
+      {types.length!==0&&types.map((type)=>{
+      if(type.targettingCollege===college.Name){
+        return (
+          <Marker 
+          key={type.Id}
+          position={[type.latitude,type.longitude]}
+          icon={Cafe} >
+            <Popup
+     position={[type.latitude,type.longitude]}
+    >
+    <div>
+      <h1>{type.Name}</h1>
+    </div>
+    </Popup>
+          </Marker>
+        )
+      }
+      return null
+    })}
+    </MapContainer>
+    </div>
+  )
+}
+
+export default Map

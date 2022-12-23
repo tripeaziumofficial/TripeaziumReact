@@ -12,20 +12,146 @@ import MiniVacation from "./components/MiniVacation";
 import InfoContainer from "./components/InfoContainer";
 import TeamTab from "./components/TeamTab";
 import Footer from "./components/Footer";
+import Map from "./components/Map";
 
 function App() {
   // const [latitude, setLatitude] = useState("");
-  // const [longitude, setLongitude] = useState("");
-  // React.useEffect(() => {
-  //   navigator.geolocation.getCurrentPosition((position) => {
-  //     setLatitude(position.coords.latitude);
-  //     setLongitude(position.coords.longitude);
-  //   });
-  // }, []);
+  // const [longitude, setLongitude] = useState("")
+  const [RCLMap,setRCLMap]=useState([{
+      Id:0,
+      Name: '',
+      latitude:0,
+      longitude: 0,
+      type: '',
+      targettingCollege: ''
+  }])
+  const [collegeMap,setCollegeMap]=useState({
+    Id: 1,
+    Name: 'Bhagwan Parshuram Institute of Technology, Rohini',
+    latitude: 28.73674982409112,
+    longitude: 77.11295999133753
+}) 
+  const CollegeArray=[
+    {
+      Id: 1,
+      Name: 'Bhagwan Parshuram Institute of Technology, Rohini',
+      latitude: 28.73674982409112,
+      longitude: 77.11295999133753
+    },
+    {
+      Id: 2,
+      Name: 'Bhartiya Vidyapeeth College of Engineering, Paschim Vihar',
+      latitude: 28.67615176356619,
+      longitude: 77.11384592496472
+    },
+    {
+      Id: 3,
+      Name: 'Gitarattan Institute of Advanced Studies, Rohini',
+      latitude: 28.71205328570887,
+      longitude: 77.11951232017336
+    },
+    {
+      Id: 4,
+      Name: 'Maharajan Agrasen Institute of Technology, Rohini',
+      latitude: 28.718550146116243,
+      longitude: 77.06659097784667
+    },
+    {Id: 5,
+      Name: 'Keshav Mahavidyalya, PitamPura',
+      latitude: 28.687770182396093,
+      longitude: 77.12017259554796
+    },
+    {Id: 6,
+      Name: 'Maharaja Surajmal Institute of Technology, JanakPuri',
+      latitude: 28.620911611309268,
+      longitude: 77.09324843130545
+    }
+  ]
+  const RestCafeLounge = [
+    {
+      Id:1,
+      Name: 'Nine Dragon',
+      latitude:28.71630722192371,
+      longitude: 77.12026457477475,
+      type: 'Cafe',
+      targettingCollege: "Bhagwan Parshuram Institute of Technology, Rohini"
+    },
+    {
+      Id:2,
+      Name: 'The Crispy Bites',
+      latitude:28.736272067372607,
+      longitude: 77.1135827015149,
+      type: 'Cafe',
+      targettingCollege: "Bhagwan Parshuram Institute of Technology, Rohini"
+    },
+    {
+      Id:3,
+      Name: 'Café Maddox',
+      latitude:28.677296337476996,
+      longitude: 77.11185506400025,
+      type: 'Cafe',
+      targettingCollege: "Bhartiya Vidyapeeth College of Engineering, Paschim Vihar"
+    },
+    {
+      Id:4,
+      Name: 'American Daddy',
+      latitude:28.669826592703767,
+      longitude: 77.10928796965945,
+      type: 'Cafe',
+      targettingCollege: "Bhartiya Vidyapeeth College of Engineering, Paschim Vihar"
+    },
+    {
+      Id:5,
+      Name: 'The Burger Club',
+      latitude:28.71630722192371,
+      longitude: 77.12026457477475,
+      type: 'Cafe',
+      targettingCollege: "Gitarattan Institute of Advanced Studies, Rohini"
+    },
+    {
+      Id:6,
+      Name: 'The Crispy Bites',
+      latitude:28.68851350595149,
+      longitude: 77.12130502211548,
+      type: 'Cafe',
+      targettingCollege: "Keshav Mahavidyalya, PitamPura"
+    },
+    {
+      Id:7,
+      Name: 'Food G',
+      latitude:28.618775672565352,
+      longitude: 77.09288584277203,
+      type: 'Cafe',
+      targettingCollege: "Maharaja Surajmal Institute of Technology, JanakPuri"
+    },
+    {
+      Id:8,
+      Name: 'Two Pots Kitchen',
+      latitude:28.71630722192371,
+      longitude: 77.12026457477475,
+      type: 'Cafe',
+      targettingCollege: 'Maharaja Surajmal Institute of Technology, Janakpuri'
+    },
+  ]
+  const changeCollege=(college)=>{
+    if(college!==''){
+      const collegeforMap=CollegeArray.find((collegeGet)=>collegeGet.Name===college)
+      setCollegeMap(collegeforMap)    
+    }
+  }
+  const getData=(data)=>{
+    // setType(prev=>{
+    //   prev=''
+    //   return data
+    // })
+    const RCL= RestCafeLounge.filter((Type)=>Type.type===data)
+    setRCLMap(prev=>{
+      prev=null
+      return RCL})
+}
   return (
     <>
       <Navbar />
-
       <BGVideo />
 
       <Heading />
@@ -35,22 +161,59 @@ function App() {
           Which College Are You From ?
         </button>
         <ul class="dropdown-menu dropdown-menu-dark dropDownList">
-          <li><a class="dropdown-item dropDownCollgName" href="#1">Bhagwan Parshuram Institute of Technology, Rohini</a></li>
-          <li><a class="dropdown-item dropDownCollgName" href="#1">Bhartiya Vidyapeeth College of Engineering, Paschim Vihar</a></li>
-          <li><a class="dropdown-item dropDownCollgName" href="#1">Gitarattan Institute of Advanced Studies, Rohini</a></li>
-          <li><a class="dropdown-item dropDownCollgName" href="#1">Maharajan Agrasen Institute of Technology, Rohini</a></li>
-          <li><a class="dropdown-item dropDownCollgName" href="#1">Keshav Mahavidyalya, PitamPura</a></li>
-          <li><a class="dropdown-item dropDownCollgName" href="#1">Dr. Akhilesh Das Gupta Institute of Technology & Management, Shastri Park</a></li>
-          <li><a class="dropdown-item dropDownCollgName" href="#1">Maharaja Surajmal Institute of Technology, JanakPuri</a></li>
-          <li><a class="dropdown-item dropDownCollgName" href="#1">Rukmini Devi Institute of Advanced Studies, Rohini</a></li>
-          <li><a class="dropdown-item dropDownCollgName" href="#1">Vivekananda Institute of Professional Studies, PitamPura</a></li>
-          <li><a class="dropdown-item dropDownCollgName" href="#1">Guru Tegh Bahadur Institute of Technology, Rajouri Garden</a></li>
-
+          <li  >
+          <a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>changeCollege("Bhagwan Parshuram Institute of Technology, Rohini")}
+           >Bhagwan Parshuram Institute of Technology, Rohini</a></li>
+          <li><a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>changeCollege("Bhartiya Vidyapeeth College of Engineering, Paschim Vihar")}
+          >Bhartiya Vidyapeeth College of Engineering, Paschim Vihar</a></li>
+          <li><a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>changeCollege("Gitarattan Institute of Advanced Studies, Rohini")}
+           >Gitarattan Institute of Advanced Studies, Rohini</a></li>
+          <li><a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>changeCollege("Maharajan Agrasen Institute of Technology, Rohini")}
+          >Maharajan Agrasen Institute of Technology, Rohini</a></li>
+          <li><a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>changeCollege("Keshav Mahavidyalya, PitamPura")}
+          >Keshav Mahavidyalya, PitamPura</a></li>
+          <li><a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>changeCollege("Maharaja Surajmal Institute of Technology, JanakPuri")}
+          >Maharaja Surajmal Institute of Technology, JanakPuri</a></li>
+          {/* <li><a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>setCollege("Dr. Akhilesh Das Gupta Institute of Technology & Management, Shastri Park")}
+          >Dr. Akhilesh Das Gupta Institute of Technology & Management, Shastri Park</a></li>
+          <li><a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>setCollege("Maharaja Surajmal Institute of Technology, JanakPuri")}
+          >Maharaja Surajmal Institute of Technology, JanakPuri</a></li>
+          <li><a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>setCollege("Rukmini Devi Institute of Advanced Studies, Rohini")}
+          >Rukmini Devi Institute of Advanced Studies, Rohini</a></li>
+          <li><a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>setCollege("Vivekananda Institute of Professional Studies, PitamPura")}
+          >Vivekananda Institute of Professional Studies, PitamPura</a></li>
+          <li><a class="dropdown-item dropDownCollgName"
+           href="#1"
+           onClick={()=>setCollege("Guru Tegh Bahadur Institute of Technology, Rajouri Garden")}
+          >Guru Tegh Bahadur Institute of Technology, Rajouri Garden</a></li> */}
         </ul>
       </div>
 
+      {collegeMap.Id&&(
+        <Map college={collegeMap} types={RCLMap}/>
+      )}
       <div class="srvcsContainer" id="srvcsCntainr">
-        <ServicesGrid />
+        <ServicesGrid TypeHandler={getData}/>
 
         <div class="tab-content" id="myTabContent">
           <div

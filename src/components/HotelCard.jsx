@@ -32,7 +32,7 @@ const HotelCard = () => {
                                         <hr/>
                                         <div class="htl-price-bkng">
                                             <div class="htl-price">
-                                                <p class="card-text htl-slashd-price m-0">&#8377 1200</p>
+                                                <p class="card-text htl-slashd-price m-0"> &#8377 1200</p>
                                                 <p class="card-text htl-fnl-price m-0">&#8377 900</p>
                                                 <p class="card-text htl-price-per-time m-0">per 24 Hrs</p>
                                             </div>
