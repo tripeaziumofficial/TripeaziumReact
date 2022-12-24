@@ -14,7 +14,7 @@ const MainVacation = () => {
                   <b>Uttarakhand</b>
                 </h4>
                 <p class="card-text mt-2 mb-0">
-                  <b>Starting from &#8377 5,000 per Person only</b>
+                  <b>Starting from ₹ 5,000 per Person only</b>
                 </p>
               </div>
               <div class="prmry-dtls">

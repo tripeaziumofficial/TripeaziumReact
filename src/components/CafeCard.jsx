@@ -19,7 +19,7 @@ const CafeCard = () => {
                     </p>
                     <div class="sub-info">
                       <p class="price-text card-text mb-0">
-                        &#8377 1600 for 2 Persons
+                        ₹ 1600 for 2 Persons
                       </p>
                       <p class="rtngs-text card-text">4.2</p>
                     </div>

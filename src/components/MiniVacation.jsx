@@ -12,7 +12,7 @@ const fileA = () => {
           />
           <div class="card-body">
             <h5 class="card-title">Goa</h5>
-            <p class="card-text">Starting at &#8377 20,000 Per person</p>
+            <p class="card-text">Starting at ₹ 20,000 Per person</p>
           </div>
         </div>
       </div>
