@@ -19,7 +19,7 @@ const Map = ({college,types}) => {
      return null;
    }
   return (
-    <div>
+    <div className='container mapBox'>
     <MapContainer  center={[college.latitude,college.longitude]} zoom={25} scrollWheelZoom={false}>
     <TileLayer
     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
