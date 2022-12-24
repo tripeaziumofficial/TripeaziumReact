@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7dbe6a0b.css",
+    "main.js": "/static/js/main.926ddc51.js",
+    "static/js/787.e4bbaf2d.chunk.js": "/static/js/787.e4bbaf2d.chunk.js",
+    "static/media/Tripeazium Final Theme Video.mp4": "/static/media/Tripeazium Final Theme Video.0c3395d5addcbe5fd5fd.mp4",
+    "index.html": "/index.html",
+    "main.7dbe6a0b.css.map": "/static/css/main.7dbe6a0b.css.map",
+    "main.926ddc51.js.map": "/static/js/main.926ddc51.js.map",
+    "787.e4bbaf2d.chunk.js.map": "/static/js/787.e4bbaf2d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7dbe6a0b.css",
+    "static/js/main.926ddc51.js"
+  ]
+}
