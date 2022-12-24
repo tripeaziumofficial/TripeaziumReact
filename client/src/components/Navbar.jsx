@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -63,7 +64,9 @@ const Navbar = () => {
                     </div>
     
                     <div class="signUp-and-signIn">
-                        <button type="button" class="btn btn-outline-dark">Sign Up / Sign In</button>
+                        <Link to="/login">
+                            <button type="button" class="btn btn-outline-dark">Sign Up / Sign In</button>
+                        </Link>
                     </div>
 
                 </div>
