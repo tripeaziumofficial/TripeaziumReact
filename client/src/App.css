@@ -9,19 +9,22 @@
     /* --bs-navbar-toggler-icon-bg: url(Hamburgir-Menu.png) !important; */
     transition: ease-in-out 0.6s;
 }
+
 .bg-light {
     --bs-bg-opacity: 0 !important;
 }
-.leaflet-container{
-    height:500px;
-    width:100%;
+
+.leaflet-container {
+    height: 500px;
+    width: 100%;
 }
+
 .fixed-top {
     position: relative !important;
 }
 
 .navbar-toggler {
-    padding: 0.2vw 0.2vw 0.2vw 0.2vw  !important;
+    padding: 0.2vw 0.2vw 0.2vw 0.2vw !important;
     line-height: 0 !important;
 }
 
@@ -57,9 +60,9 @@
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bolder !important;
     font-size: 2.5rem !important;
-} 
+}
 
-.navbar > .container-fluid > .offcanvas > .offcanvas-body > .navbar-nav > .nav-item > .nav-link {
+.navbar>.container-fluid>.offcanvas>.offcanvas-body>.navbar-nav>.nav-item>.nav-link {
     margin: 0.225rem;
     padding: 0.225rem;
     border-radius: 0.225rem;
@@ -69,7 +72,7 @@
     transition: ease-in-out 0.5s !important;
 }
 
-.navbar > .container-fluid > .offcanvas > .offcanvas-body > .navbar-nav > .nav-item > .nav-link:hover {
+.navbar>.container-fluid>.offcanvas>.offcanvas-body>.navbar-nav>.nav-item>.nav-link:hover {
     font-size: 2.25rem !important;
 }
 
@@ -77,7 +80,7 @@
     height: 92vh !important;
 }
 
-.container > video {
+.container>video {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -101,9 +104,10 @@
     border-radius: 0.4rem;
 }
 
-.h-One, .h-Three {
+.h-One,
+.h-Three {
     text-align: center;
-    font-family: 'Ace Sans' , 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Ace Sans', 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 800;
 }
 
@@ -115,29 +119,37 @@
     font-size: 4vw !important;
 }
 
-.collgDropDown{
+.collgDropDown {
     text-align: center;
     width: 40vw;
     height: 8vh;
     margin: 0 30vw;
 }
 
-.dropDownClick{
+.dropDownClick {
     background-color: #a5a2a2;
     border-style: none;
 }
 
-.dropDownList{
+.dropDownList {
     width: 40vw;
     background-color: #797979;
 }
 
-.dropDownCollgName{
+.dropDownCollgName {
     height: 6vh;
+    display: flex;
+    align-items: center;
+    white-space: normal;
 }
 
-.dropDownCollgName:active{
+.dropDownCollgName:active {
     background-color: #232323;
+}
+
+.mapBox {
+    background-origin: padding-box;
+    border: 7px solid gray;
 }
 
 .srvcsContainer {
@@ -147,22 +159,22 @@
     position: relative;
 }
 
-.srvcsContainer > .nav {
+.srvcsContainer>.nav {
     position: relative;
     top: 1.25rem;
     border-radius: 0.875rem;
     background-color: #ffffff;
     background: linear-gradient(450deg, #ececec, #e1e1e1);
-    box-shadow:  1px 1px 1px #a5a2a2, 2.5px 2.5px 2.5px #a5a2a2;
+    box-shadow: 1px 1px 1px #a5a2a2, 2.5px 2.5px 2.5px #a5a2a2;
 }
 
-.srvcsContainer > .nav-tabs {
+.srvcsContainer>.nav-tabs {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     padding: 0.275rem;
 }
 
-.srvcsContainer > .nav > .nav-item > .nav-link {
+.srvcsContainer>.nav>.nav-item>.nav-link {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,8 +184,8 @@
     font-weight: bold;
 }
 
-.srvcsContainer > .tab-content {
-    height: 100%; 
+.srvcsContainer>.tab-content {
+    height: 100%;
     padding: 1.725rem 0.725rem 0.725rem 0.725rem;
     background-color: #ffffff;
     border-radius: 0.725rem;
@@ -186,68 +198,68 @@
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     column-gap: 0.8rem;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row {
     height: 100%;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-4 > .img-fluid {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-4>.img-fluid {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body {
     vertical-align: middle;
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body > .card-head {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body>.card-head {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body > .card-head > .htl-rtng > .rtng-text {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body>.card-head>.htl-rtng>.rtng-text {
     padding: 0rem 0.6rem 0rem 0.4rem;
     border-radius: 0.2rem;
     color: #ffffff;
     background-color: #19c919;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body > .htls-dtls > .dtls-wrapper {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body>.htls-dtls>.dtls-wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     column-gap: 1.6rem;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body > .htls-dtls > .dtls-wrapper > .dtls-span {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body>.htls-dtls>.dtls-wrapper>.dtls-span {
     color: #5a5c5e;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body > .htl-price-bkng {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body>.htl-price-bkng {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body > .htl-price-bkng > .htl-price {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body>.htl-price-bkng>.htl-price {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body > .htl-price-bkng > .htl-price > .htl-slashd-price {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body>.htl-price-bkng>.htl-price>.htl-slashd-price {
     padding-top: 0.2rem;
     font-size: 1.8vh;
     line-height: 1.6vh;
@@ -256,21 +268,21 @@
     text-decoration: line-through;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body > .htl-price-bkng > .htl-price > .htl-fnl-price {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body>.htl-price-bkng>.htl-price>.htl-fnl-price {
     padding-top: 0.2rem;
     text-align: left;
     font-size: 4vh;
     line-height: 3.6vh;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body > .htl-price-bkng > .htl-price > .htl-price-per-time {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body>.htl-price-bkng>.htl-price>.htl-price-per-time {
     font-size: 2vh;
     line-height: 1.8vh;
     color: #5a5c5e;
     text-align: left;
 }
 
-.srvcsContainer > .tab-content > .hotel > .htlsCntnr > .card > .row > .col-md-8 > .card-body > .htl-price-bkng > .htl-bkng {
+.srvcsContainer>.tab-content>.hotel>.htlsCntnr>.card>.row>.col-md-8>.card-body>.htl-price-bkng>.htl-bkng {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -284,23 +296,23 @@
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.srvcsContainer > .tab-content > .restaurant > .row > .col > .card {
+.srvcsContainer>.tab-content>.restaurant>.row>.col>.card {
     border: none;
     transition-duration: 0.8s;
 }
 
-.srvcsContainer > .tab-content > .restaurant > .row > .col > .card:hover {
-    box-shadow: 2.25px 2.25px 2.25px 2.25px rgba(0,0,0,0.1);
+.srvcsContainer>.tab-content>.restaurant>.row>.col>.card:hover {
+    box-shadow: 2.25px 2.25px 2.25px 2.25px rgba(0, 0, 0, 0.1);
 }
 
-.srvcsContainer > .tab-content > .restaurant > .row > .col > .card > .card-body {
+.srvcsContainer>.tab-content>.restaurant>.row>.col>.card>.card-body {
     height: 100%;
     width: 100%;
     padding: 1rem 0.5rem 1rem 0.5rem;
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.srvcsContainer > .tab-content > .restaurant > .row > .col > .card > .card-body > .restro {
+.srvcsContainer>.tab-content>.restaurant>.row>.col>.card>.card-body>.restro {
     height: 100%;
     width: 100%;
     display: flex;
@@ -312,18 +324,18 @@
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.srvcsContainer > .tab-content > .restaurant > .row > .col > .card > .card-body > .card-title {
+.srvcsContainer>.tab-content>.restaurant>.row>.col>.card>.card-body>.card-title {
     text-align: start;
 }
 
-.srvcsContainer > .tab-content > .restaurant > .row > .col > .card > .card-body >  .restro > .card-text {
+.srvcsContainer>.tab-content>.restaurant>.row>.col>.card>.card-body>.restro>.card-text {
     padding: 0% 2% 0% 2%;
     border-radius: 0.25rem;
     color: #ffffff;
     background-color: #19c919;
 }
 
-.srvcsContainer > .tab-content > .restaurant > .row > .col > .card > .card-body > .restro-info {
+.srvcsContainer>.tab-content>.restaurant>.row>.col>.card>.card-body>.restro-info {
     text-align: start;
     display: flex;
     flex-wrap: wrap;
@@ -333,15 +345,15 @@
     column-gap: 1.6rem;
 }
 
-.srvcsContainer > .tab-content > .restaurant > .row > .col > .card > .card-body > .restro-info > .lctns-text {
+.srvcsContainer>.tab-content>.restaurant>.row>.col>.card>.card-body>.restro-info>.lctns-text {
     text-align: start;
     color: #6d6d6d;
 }
 
-.srvcsContainer > .tab-content > .restaurant > .row > .col > .card > .card-body > .restro-info > .ctgry-text {
+.srvcsContainer>.tab-content>.restaurant>.row>.col>.card>.card-body>.restro-info>.ctgry-text {
     width: 6.5rem;
     text-align: end;
-    color:#6d6d6d;
+    color: #6d6d6d;
 }
 
 .cafesAndLoungesTabHdng {
@@ -350,37 +362,38 @@
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card {
+.srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card {
     border: none;
     transition-duration: 0.8s;
 }
 
-.srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card:hover {
-    box-shadow: 2.25px 2.25px 2.25px 2.25px rgba(0,0,0,0.1);
+.srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card:hover {
+    box-shadow: 2.25px 2.25px 2.25px 2.25px rgba(0, 0, 0, 0.1);
 }
 
-.srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card > .card-img-top {
+.srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card>.card-img-top {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
-.srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card > .card-body {
+
+.srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card>.card-body {
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 100%;
 }
 
-.srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card > .card-body > .card-title {
+.srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card>.card-body>.card-title {
     width: 100%;
     margin: 0rem;
     text-align: start;
 }
 
-.srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card > .card-body > .card-text {
+.srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card>.card-body>.card-text {
     color: #6d6d6d;
     text-align: start;
 }
 
-.srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card > .card-body > .sub-info {
+.srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card>.card-body>.sub-info {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -389,14 +402,14 @@
     column-gap: 1.25rem;
 }
 
-.srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card > .card-body > .sub-info > .rtngs-text {
+.srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card>.card-body>.sub-info>.rtngs-text {
     padding: 0% 2.5% 0% 1.5%;
     border-radius: 0.25rem;
     color: #ffffff;
     background-color: #19c919;
 }
 
-.srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card > .card-body > .sub-info > .price-text {
+.srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card>.card-body>.sub-info>.price-text {
     border-radius: 0.25rem;
     text-align: start;
     color: #6d6d6d;
@@ -408,40 +421,40 @@
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.tab-content > .vacation > .card {
+.tab-content>.vacation>.card {
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 1rem;
     border: none;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-.tab-content > .vacation > .card:hover {
-    box-shadow: 2.25px 2.25px 2.25px 2.25px rgba(0,0,0,0.1);
+.tab-content>.vacation>.card:hover {
+    box-shadow: 2.25px 2.25px 2.25px 2.25px rgba(0, 0, 0, 0.1);
 }
 
-.tab-content > .vacation > .card > .card-img-top {
-    border-radius:  0.35rem 0.35rem 0rem 0rem;
+.tab-content>.vacation>.card>.card-img-top {
+    border-radius: 0.35rem 0.35rem 0rem 0rem;
 }
 
-.tab-content > .vacation > .card > .card-body {
+.tab-content>.vacation>.card>.card-body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.tab-content > .vacation > .card > .card-body > .card-title {
+.tab-content>.vacation>.card>.card-body>.card-title {
     text-align: start;
     font-size: 3vw;
 }
 
-.tab-content > .vacation > .card > .card-body > .card-text {
+.tab-content>.vacation>.card>.card-body>.card-text {
     text-align: start;
     font-size: 1.5vw;
     color: #6d6d6d;
 }
 
-.tab-content > .vacation > .card > .prmry-dtls {
+.tab-content>.vacation>.card>.prmry-dtls {
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     flex-wrap: wrap;
@@ -450,38 +463,38 @@
     column-gap: 0.8rem;
 }
 
-.tab-content > .vacation > .card > .prmry-dtls > .lctns-dtls {
+.tab-content>.vacation>.card>.prmry-dtls>.lctns-dtls {
     width: 25rem;
     padding: 0% 1.2% 0% 1.2%;
 }
 
-.tab-content > .vacation > .card > .prmry-dtls > .booking-optns {
+.tab-content>.vacation>.card>.prmry-dtls>.booking-optns {
     width: 10rem;
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
 }
 
-.tab-content > .vacation > .card > hr {
+.tab-content>.vacation>.card>hr {
     margin: 0.775rem;
 }
 
-.tab-content > .vacation > .vctns-cntnr {
+.tab-content>.vacation>.vctns-cntnr {
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 1.2rem;
     border: none;
     border-radius: 0.525rem;
     display: flex;
     flex-direction: row;
-    box-shadow: 2.25px 2.25px 2.25px 2.25px rgba(0,0,0,0.2);
+    box-shadow: 2.25px 2.25px 2.25px 2.25px rgba(0, 0, 0, 0.2);
 }
 
-.tab-content > .vacation > .vctns-cntnr > .card {
+.tab-content>.vacation>.vctns-cntnr>.card {
     width: 100% !important;
     border: none;
 }
 
-.tab-content > .vacation > .vctns-cntnr > .card > .card-body {
+.tab-content>.vacation>.vctns-cntnr>.card>.card-body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -489,18 +502,18 @@
     align-content: center;
 }
 
-.tab-content > .vacation > .vctns-cntnr > .card > .card-body > .card-title {
+.tab-content>.vacation>.vctns-cntnr>.card>.card-body>.card-title {
     font-size: 4vw;
 }
 
-.tab-content > .vacation > .vctns-cntnr > .card > .card-body > .card-text {
+.tab-content>.vacation>.vctns-cntnr>.card>.card-body>.card-text {
     padding: 1.2rem;
     font-size: larger;
     font-weight: 200;
     color: #5c5c5c;
 }
 
-.tab-content > .vacation > .vctns-cntnr > .vacation-slider {
+.tab-content>.vacation>.vctns-cntnr>.vacation-slider {
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -513,21 +526,21 @@
     width: 0rem;
 }
 
-.tab-content > .vacation > .vctns-cntnr > .vacation-slider > .vacation-card-small {
+.tab-content>.vacation>.vctns-cntnr>.vacation-slider>.vacation-card-small {
     margin: 1rem;
     text-align: start;
 }
 
-.tab-content > .vacation > .vctns-cntnr > .vacation-slider > .vacation-card-small > .card {
+.tab-content>.vacation>.vctns-cntnr>.vacation-slider>.vacation-card-small>.card {
     border: none;
 }
 
-.tab-content > .vacation > .vctns-cntnr > .vacation-slider > .vacation-card-small > .card > .card-body > .card-title {
+.tab-content>.vacation>.vctns-cntnr>.vacation-slider>.vacation-card-small>.card>.card-body>.card-title {
     text-align: start;
     font-weight: 800;
 }
 
-.tab-content > .vacation > .vctns-cntnr > .vacation-slider > .vacation-card-small > .card > .card-body > .card-text {
+.tab-content>.vacation>.vctns-cntnr>.vacation-slider>.vacation-card-small>.card>.card-body>.card-text {
     text-align: start;
 }
 
@@ -543,7 +556,7 @@
     background-attachment: fixed;
 }
 
-.prllx-cntnr > .prllx-cntnt > .card-title {
+.prllx-cntnr>.prllx-cntnt>.card-title {
     padding: 2rem;
     text-align: center;
     font-size: 6vw;
@@ -581,13 +594,13 @@
     justify-content: center;
 }
 
-.cntnr-team > .cmpny-team-img {
+.cntnr-team>.cmpny-team-img {
     width: 75vw;
     height: 75vh;
     object-fit: contain;
 }
 
-.cntnr-team > .trpzm-quote {
+.cntnr-team>.trpzm-quote {
     width: 100vw;
     text-align: center;
     font-size: 2.5rem;
@@ -598,7 +611,7 @@
     font-family: 'Josefin Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.container-footer > .social-icons {
+.container-footer>.social-icons {
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -606,16 +619,16 @@
 
 @media screen and (max-width: 864px) {
 
-    .srvcsContainer > .tab-content > .restaurant > .row > .col > .card > .card-body > .restro-info > .ctgry-text {
+    .srvcsContainer>.tab-content>.restaurant>.row>.col>.card>.card-body>.restro-info>.ctgry-text {
         text-align: start;
-        color:#6d6d6d;
+        color: #6d6d6d;
     }
-    
+
 }
 
 @media screen and (min-width:769px) {
 
-    .navbar-brand{
+    .navbar-brand {
         position: relative !important;
         left: 4% !important;
     }
@@ -628,7 +641,7 @@
 
 @media screen and (max-width:768px) {
 
-    .navbar-brand{
+    .navbar-brand {
         position: relative !important;
         left: 4% !important;
     }
@@ -638,70 +651,84 @@
         pointer-events: none;
     }
 
-    .tab-content > .vacation > .card {
+    .collgDropDown {
+        margin: 0 5vw;
+        width: 90vw;
+    }
+
+    .dropDownClick {
+        font-size: 4.5vw;
+    }
+
+    .dropDownList{
+        width: 90vw;
+        font-size: 3.5vw;
+    }
+
+    .tab-content>.vacation>.card {
         margin: 1rem;
         border: 2px solid #a9a9a9;
         padding: 0rem !important;
     }
 
-    .tab-content > .vacation > .card > .prmry-dtls{
+    .tab-content>.vacation>.card>.prmry-dtls {
         display: none;
         pointer-events: none;
     }
 
-    .tab-content > .vacation > .card > hr {
+    .tab-content>.vacation>.card>hr {
         display: none;
         pointer-events: none;
     }
 
-    .srvcsContainer > .tab-content > .restaurant > .row > .col > .card {
+    .srvcsContainer>.tab-content>.restaurant>.row>.col>.card {
         border: 0.0175rem solid #a9a9a9;
     }
-    
-    .srvcsContainer > .tab-content > .restaurant > .row > .col > .card:hover {
+
+    .srvcsContainer>.tab-content>.restaurant>.row>.col>.card:hover {
         box-shadow: none
     }
 
-    .srvcsContainer > .tab-content > .restaurant > .row > .col > .card > .card-body > .Restaurants-end-divider {
+    .srvcsContainer>.tab-content>.restaurant>.row>.col>.card>.card-body>.Restaurants-end-divider {
         display: none;
     }
 
-    .srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card {
+    .srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card {
         border: 0.0175rem solid #a9a9a9;
     }
 
-    .srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card:hover {
+    .srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card:hover {
         box-shadow: none;
     }
 
-    .srvcsContainer > .tab-content > .cafesAndLounges > .row > .col > .card > .card-body > .CafesAndLounges-end-divider {
+    .srvcsContainer>.tab-content>.cafesAndLounges>.row>.col>.card>.card-body>.CafesAndLounges-end-divider {
         display: none;
     }
 
-    .tab-content > .vacation > .card > .card-body > .card-title {
+    .tab-content>.vacation>.card>.card-body>.card-title {
         text-align: start;
         font-size: 8vw;
     }
-    
-    .tab-content > .vacation > .card > .card-body > .card-text {
+
+    .tab-content>.vacation>.card>.card-body>.card-text {
         text-align: start;
         font-size: 4vw;
     }
 
-    .tab-content > .vacation > .vctns-cntnr {
+    .tab-content>.vacation>.vctns-cntnr {
         display: flex;
         flex-direction: column;
     }
 
-    .tab-content > .vacation > .vctns-cntnr > .card > .card-body > .card-title {
+    .tab-content>.vacation>.vctns-cntnr>.card>.card-body>.card-title {
         font-size: 10vw;
     }
 
-    .tab-content > .vacation > .vctns-cntnr > .vacation-slider > .vacation-card-small {
+    .tab-content>.vacation>.vctns-cntnr>.vacation-slider>.vacation-card-small {
         margin: 0rem;
     }
 
-    .tab-content > .vacation > .vctns-cntnr > .vacation-slider > .vacation-card-small > .card {
+    .tab-content>.vacation>.vctns-cntnr>.vacation-slider>.vacation-card-small>.card {
         border: 0.064rem solid rgba(0, 0, 0, 0.175);
     }
 
