@@ -158,7 +158,7 @@ const getData=(data)=>{
       <br />
       <div class="btn-group dropdown collgDropDown">
         <button class="btn btn-secondary btn-lg dropdown-toggle dropDownClick" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Which College Are You From ?
+          Which College Do You Want To Search ?
         </button>
         <ul class="dropdown-menu dropdown-menu-dark dropDownList">
           <li  >
