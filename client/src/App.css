@@ -545,6 +545,11 @@
     text-align: start;
 }
 
+.nearbyAct{
+    text-align: center;
+    height: 10vh;
+}
+
 .prllx-cntnr {
     margin: 2rem 0rem 2rem 0rem;
     height: 75vh;

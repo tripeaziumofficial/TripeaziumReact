@@ -326,18 +326,17 @@ const Home = () => {
           >
             Atlantis, under the sea. Under the sea. Where are you now ? Another
             dream, the monster's running wild inside of me. I'm faded.
-          </div>
+          </div>*/}
 
           <div
-            class="tab-pane fade"
+            class="tab-pane fade nearbyAct"
             id="nearby-activities-tab-pane"
             role="tabpanel"
             aria-labelledby="nearby-activities-tab"
             tabindex="0"
           >
-            Atlantis, under the sea. Under the sea. Where are you now ? Another
-            dream, the monster's running wild inside of me. I'm faded.
-          </div> */}
+            <h3>Coming Up With This Soon !</h3> 
+          </div> 
         </div>
       </div>
 
