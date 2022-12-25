@@ -13,6 +13,7 @@ router.get("/test", (req, res) => {
 // router.post("/add_restaurant", restaurantController.createRestaurant);
 // router.post("/add_hotel", hotelController.createHotel);
 router.post("/add_cafe", cafeController.createCafe);
+router.get("/get_cafes", cafeController.getCafes);
 
 router.post('/login', userController.loginUser);
 router.post('/signup', userController.createUser);
