@@ -24,6 +24,18 @@ const cafeSchema = new mongoose.Schema({
     contact: {
         type: String,
         // required: true
+    },
+    image_url: {
+        type: String,
+        // required: true
+    },
+    ratings: {
+        type: String,
+        // required: true
+    },
+    pricing: {
+        type: String,
+        // required: true
     }
 })
 
