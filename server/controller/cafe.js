@@ -16,6 +16,22 @@ const createCafe = (req, res) => {
     });
 }
 
+const getCafes = async (req, res) => {
+    // console.log(req.body);
+    // console.log("hi")
+  
+    res.setHeader("Content-Type", "application/json");
+
+    const data = await Cafe.find({});
+
+    if(data)
+    {
+        return res.status(200).json(data);
+    }
+    res.status(400).json("no data");
+}
+
 module.exports = {
-    createCafe
+    createCafe,
+    getCafes
 }
