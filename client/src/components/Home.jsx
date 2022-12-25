@@ -7,8 +7,8 @@ import Navbar from "./Navbar";
 import HotelCard from "./HotelCard";
 import RestaurantCard from "./RestaurantCard";
 import CafeCard from "./CafeCard";
-import MainVacation from "./MainVacation";
-import MiniVacation from "./MiniVacation";
+// import MainVacation from "./MainVacation";
+// import MiniVacation from "./MiniVacation";
 import InfoContainer from "./InfoContainer";
 import TeamTab from "./TeamTab";
 import Footer from "./Footer";
@@ -161,7 +161,7 @@ const Home = () => {
       <br />
       <div class="btn-group dropdown collgDropDown">
         <button class="btn btn-secondary btn-lg dropdown-toggle dropDownClick" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Which College Do You Want To Search ?
+          Which College Are You From ?
         </button>
         <ul class="dropdown-menu dropdown-menu-dark dropDownList">
           <li  >
@@ -228,7 +228,7 @@ const Home = () => {
             tabindex="0"
           >
             <h3 class="htlsTabHdng">
-              <b>Best Hotels in the City</b>
+              <b>Hostels Near You</b>
             </h3>
             <div class="htlsCntnr">
               <HotelCard />
@@ -278,7 +278,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div
+          {/* <div
             class="vacation tab-pane fade"
             id="vacation-tab-pane"
             role="tabpanel"
@@ -337,7 +337,7 @@ const Home = () => {
           >
             Atlantis, under the sea. Under the sea. Where are you now ? Another
             dream, the monster's running wild inside of me. I'm faded.
-          </div>
+          </div> */}
         </div>
       </div>
 

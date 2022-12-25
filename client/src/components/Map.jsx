@@ -3,11 +3,11 @@ import { MapContainer, Marker, Popup, TileLayer,useMap } from 'react-leaflet'
 import { Icon } from 'leaflet'
 
 const Cafe = new Icon({
-  iconUrl:'https://cdn-icons-png.flaticon.com/512/4574/4574500.png',
+  iconUrl:'https://cdn-icons-png.flaticon.com/512/3307/3307695.png',
   iconSize: [30,30]
 })
 const College = new Icon({
-  iconUrl:'https://cdn-icons-png.flaticon.com/512/4004/4004157.png',
+  iconUrl:'https://cdn-icons-png.flaticon.com/512/5193/5193797.png',
   iconSize: [35,35]
 })
 const Map = ({college,types}) => {

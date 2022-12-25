@@ -150,6 +150,7 @@
 .mapBox {
     background-origin: padding-box;
     border: 7px solid gray;
+    height: fit-content !important;
 }
 
 .srvcsContainer {
