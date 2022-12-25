@@ -1,9 +1,6 @@
 import React from 'react'
 
 const ServicesGrid = ({TypeHandler}) => {
-// useEffect(()=>{
-//     handleType(type1)
-// })
   return (
     <>
     <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">

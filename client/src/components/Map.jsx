@@ -20,7 +20,7 @@ const Map = ({college,types}) => {
    }
   return (
     <div>
-    <MapContainer  center={[college.latitude,college.longitude]} zoom={25} scrollWheelZoom={false}>
+    <MapContainer  center={[college.latitude,college.longitude]} zoom={25} scrollWheelPanning={false} scrollWheelZoom={false} >
     <TileLayer
     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
