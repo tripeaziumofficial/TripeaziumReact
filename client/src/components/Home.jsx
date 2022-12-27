@@ -13,10 +13,12 @@ import InfoContainer from "./InfoContainer";
 import TeamTab from "./TeamTab";
 import Footer from "./Footer";
 import Map from "./Map";
+import { useEffect } from "react";
 
 const Home = () => {
   // const [latitude, setLatitude] = useState("");
   // const [longitude, setLongitude] = useState("")
+  const [cafeMap,setCafeMap] = useState(null)
   const [RCLMap, setRCLMap] = useState([{
     Id: 0,
     Name: '',
@@ -28,43 +30,64 @@ const Home = () => {
   const [collegeMap, setCollegeMap] = useState({
     Id: 1,
     Name: 'Bhagwan Parshuram Institute of Technology, Rohini',
+    name: 'BPIT, Rohini, Sector-17',
     latitude: 28.73674982409112,
     longitude: 77.11295999133753
   })
+  const getAllCafes=async () => {
+    let cafes;
+  
+    const res = await fetch('https://tripeazium-backend.onrender.com/api/main/get_cafes')
+  
+    cafes = await res.json();
+    
+    setCafeMap(cafes)
+    console.log('ho')
+  }
+  if(!cafeMap){
+    getAllCafes()
+  }
+  console.log(cafeMap)
   const CollegeArray = [
     {
       Id: 1,
       Name: 'Bhagwan Parshuram Institute of Technology, Rohini',
+      name: 'BPIT, Rohini, Sector-17',
       latitude: 28.73674982409112,
       longitude: 77.11295999133753
     },
     {
       Id: 2,
       Name: 'Bhartiya Vidyapeeth College of Engineering, Paschim Vihar',
+      name:'BVCOE, Paschim Vihar',
       latitude: 28.67615176356619,
       longitude: 77.11384592496472
     },
     {
       Id: 3,
       Name: 'Gitarattan Institute of Advanced Studies, Rohini',
+      name: 'Gitarattan Institute of Advanced Studies, Rohini',
       latitude: 28.71205328570887,
       longitude: 77.11951232017336
     },
     {
       Id: 4,
       Name: 'Maharajan Agrasen Institute of Technology, Rohini',
+      name:'MAIT - Rohini',
       latitude: 28.718550146116243,
       longitude: 77.06659097784667
     },
     {
       Id: 5,
       Name: 'Keshav Mahavidyalya, PitamPura',
+      name:'Keshav MahaVidyalya, PitamPura',
       latitude: 28.687770182396093,
       longitude: 77.12017259554796
     },
     {
       Id: 6,
       Name: 'Maharaja Surajmal Institute of Technology, JanakPuri',
+      name: 'Maharaja Surajmal Institute of Technology, Janakpuri',
       latitude: 28.620911611309268,
       longitude: 77.09324843130545
     }
@@ -137,7 +160,7 @@ const Home = () => {
   ]
   const changeCollege = (college) => {
     if (college !== '') {
-      const collegeforMap = CollegeArray.find((collegeGet) => collegeGet.Name === college)
+      const collegeforMap = CollegeArray.find((collegeGet) => collegeGet.name === college)
       setCollegeMap(collegeforMap)
     }
   }
@@ -167,11 +190,11 @@ const Home = () => {
           <li  >
             <a class="dropdown-item dropDownCollgName"
               href="#1"
-              onClick={() => changeCollege("Bhagwan Parshuram Institute of Technology, Rohini")}
+              onClick={() => changeCollege("BPIT, Rohini, Sector-17")}
             >Bhagwan Parshuram Institute of Technology, Rohini</a></li>
           <li><a class="dropdown-item dropDownCollgName"
             href="#1"
-            onClick={() => changeCollege("Bhartiya Vidyapeeth College of Engineering, Paschim Vihar")}
+            onClick={() => changeCollege("BVCOE, Paschim Vihar")}
           >Bhartiya Vidyapeeth College of Engineering, Paschim Vihar</a></li>
           <li><a class="dropdown-item dropDownCollgName"
             href="#1"
@@ -179,11 +202,11 @@ const Home = () => {
           >Gitarattan Institute of Advanced Studies, Rohini</a></li>
           <li><a class="dropdown-item dropDownCollgName"
             href="#1"
-            onClick={() => changeCollege("Maharajan Agrasen Institute of Technology, Rohini")}
+            onClick={() => changeCollege("MAIT")}
           >Maharajan Agrasen Institute of Technology, Rohini</a></li>
           <li><a class="dropdown-item dropDownCollgName"
             href="#1"
-            onClick={() => changeCollege("Keshav Mahavidyalya, PitamPura")}
+            onClick={() => changeCollege("Keshav MahaVidyalya, PitamPura")}
           >Keshav Mahavidyalya, PitamPura</a></li>
           <li><a class="dropdown-item dropDownCollgName"
             href="#1"
@@ -213,8 +236,8 @@ const Home = () => {
       </div>
       <br /><br /><br />
 
-      {collegeMap.Id && (
-        <Map college={collegeMap} types={RCLMap} />
+      {collegeMap.Id && cafeMap && (
+        <Map college={collegeMap} types={cafeMap} />
       )}
       <div class="srvcsContainer" id="srvcsCntainr">
         <ServicesGrid TypeHandler={getData} />
@@ -272,9 +295,12 @@ const Home = () => {
             </h3>
 
             <div class="row row-cols-1 row-cols-md-3 g-4">
-              <CafeCard />
-              <CafeCard />
-              <CafeCard />
+              {cafeMap && cafeMap.map((cafe)=>{
+                if(cafe.college===collegeMap.name){
+                return <CafeCard cafe={cafe} key={cafe.id} />
+                }
+                return null
+              })}
             </div>
           </div>
 

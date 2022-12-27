@@ -37,17 +37,17 @@ const Map = ({college,types}) => {
       </Marker>
       <RecenterAutomatically lat={college.latitude} lng={college.longitude} />
       {types.length!==0&&types.map((type)=>{
-      if(type.targettingCollege===college.Name){
+      if(type.college===college.name){
         return (
           <Marker 
-          key={type.Id}
+          key={type.id}
           position={[type.latitude,type.longitude]}
           icon={Cafe} >
             <Popup
      position={[type.latitude,type.longitude]}
     >
     <div>
-      <h1>{type.Name}</h1>
+      <h1>{type.name}</h1>
     </div>
     </Popup>
           </Marker>
