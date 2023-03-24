@@ -18,6 +18,7 @@ import { useEffect } from "react";
 const Home = () => {
   // const [latitude, setLatitude] = useState("");
   // const [longitude, setLongitude] = useState("")
+  const [currCollege, setCurrCollege] = useState('Which College Are You From ?');
   const [cafeMap,setCafeMap] = useState(null)
   const [RCLMap, setRCLMap] = useState([{
     Id: 0,
@@ -160,6 +161,7 @@ const Home = () => {
   ]
   const changeCollege = (college) => {
     if (college !== '') {
+      setCurrCollege(college);
       const collegeforMap = CollegeArray.find((collegeGet) => collegeGet.name === college)
       setCollegeMap(collegeforMap)
     }
@@ -176,7 +178,7 @@ const Home = () => {
     })
   }
   return (
-    <>
+    <div class="overflow-hidden">
       <Navbar />
       <BGVideo />
 
@@ -184,7 +186,7 @@ const Home = () => {
       <br />
       <div class="btn-group dropdown collgDropDown">
         <button class="btn btn-secondary btn-lg dropdown-toggle dropDownClick" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Which College Are You From ?
+          { currCollege }
         </button>
         <ul class="dropdown-menu dropdown-menu-dark dropDownList">
           <li  >
@@ -379,7 +381,7 @@ const Home = () => {
 
         <Footer />
       </div>
-    </>
+    </div >
   )
 }
 
