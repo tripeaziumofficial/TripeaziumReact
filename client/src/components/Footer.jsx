@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-    <div class="container-footer">
+    <div class="container-footer px-4" style={{ borderTop:'0.5px solid black' }}>
           <footer class="py-3 my-4">
             <ul class="nav justify-content-center pb-3 mb-3">
               <li class="nav-item">

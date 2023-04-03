@@ -4,22 +4,32 @@ import BGVideo from "./BGVideo";
 import Heading from "./Heading";
 import ServicesGrid from "./ServiceGrid";
 import Navbar from "./Navbar";
-import HotelCard from "./HotelCard";
+import HostelCard from "./HostelCard";
 import RestaurantCard from "./RestaurantCard";
 import CafeCard from "./CafeCard";
 // import MainVacation from "./MainVacation";
 // import MiniVacation from "./MiniVacation";
 import InfoContainer from "./InfoContainer";
 import TeamTab from "./TeamTab";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import Map from "./Map";
 import { useEffect } from "react";
 
 const Home = () => {
+
+  useEffect(() => {
+    getAllCafes();
+
+    getAllPgs();
+  }, [])
+  
+  const API = process.env.REACT_APP_API_URL;
+  
   // const [latitude, setLatitude] = useState("");
   // const [longitude, setLongitude] = useState("")
   const [currCollege, setCurrCollege] = useState('Which College Are You From ?');
-  const [cafeMap,setCafeMap] = useState(null)
+  const [cafeMap,setCafeMap] = useState(null);
+  const [pgData, setPgData] = useState([]);
   const [RCLMap, setRCLMap] = useState([{
     Id: 0,
     Name: '',
@@ -35,19 +45,32 @@ const Home = () => {
     latitude: 28.73674982409112,
     longitude: 77.11295999133753
   })
-  const getAllCafes=async () => {
+  const getAllCafes = async () => {
     let cafes;
-  
-    const res = await fetch('https://tripeazium-backend.onrender.com/api/main/get_cafes')
+    // console.log(API)
+    const res = await fetch(`${API}/api/main/get_cafes`)
   
     cafes = await res.json();
     
     setCafeMap(cafes)
-    console.log('ho')
+    // console.log('ho')
   }
-  if(!cafeMap){
-    getAllCafes()
+
+  const getAllPgs = async () => {
+    let pgs;
+    // console.log(API)
+    const res = await fetch(`${API}/api/main/get_pgs`)
+  
+    pgs = await res.json();
+    
+    setPgData(pgs)
+
+    console.log(pgData)
+    // console.log('ho')
   }
+  // if(!cafeMap){
+  //   getAllCafes()
+  // }
   console.log(cafeMap)
   const CollegeArray = [
     {
@@ -179,7 +202,7 @@ const Home = () => {
   }
   return (
     <div class="overflow-hidden">
-      <Navbar />
+      {/* <Navbar /> */}
       <BGVideo />
 
       <Heading />
@@ -253,15 +276,18 @@ const Home = () => {
             tabindex="0"
           >
             <h3 class="htlsTabHdng">
-              <b>Hostels Near You</b>
+              <b>Hostels and PGs Near You</b>
             </h3>
-            <div class="htlsCntnr">
-              <HotelCard />
-              <HotelCard />
-              <HotelCard />
-              <HotelCard />
-              <HotelCard />
-              <HotelCard />
+            <div class="htlsCntnr row row-cols-1 row-cols-md-3 g-4">
+              {
+                pgData.slice(0,4).map((pg)=>{
+                  if(pg.college===collegeMap.name){
+                  return <HostelCard pg={pg} key={pg.id} />
+                  }
+                  return null
+                })
+              }
+              
             </div>
           </div>
 
@@ -371,15 +397,13 @@ const Home = () => {
       <div class="abtContainer" id="abtCntainr">
         <div class="accordion" id="accordionExample">
           <InfoContainer />
-          <InfoContainer />
-          <InfoContainer />
+          {/* <InfoContainer />
+          <InfoContainer /> */}
         </div>
 
-        <TeamTab />
+        {/* <TeamTab /> */}
 
-        <hr />
-
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div >
   )

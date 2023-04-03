@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <>
-    <nav class="navbar bg-light fixed-top">
+    <nav class="navbar fixed-top" style={{ borderBottom:'0.5px solid black', background:'white' }}>
             <div class="container-fluid">
             
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -54,7 +54,11 @@ const Navbar = () => {
 
                     </div>
 
-                <a class="navbar-brand" href="#srvcsCntainr"><img src="/icons/Tripeazium-Logo.png" alt="Tripeazium" class="navbar-brand-logo" width="100rem" /></a>
+                <div class="navbar-brand">
+                    <Link to="/">
+                        <img src="/icons/Tripeazium-Logo.png" alt="Tripeazium" class="navbar-brand-logo" width="100rem" />
+                    </Link>
+                </div>
             
                 <div class="sub-container-fluid">
                     
